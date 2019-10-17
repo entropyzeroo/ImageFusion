@@ -17,6 +17,16 @@ hy = cat(3, rgb_y, nir_y);
 [gx, gy] = se(rgb_x, rgb_y, hx, hy);
 out = reintegration(rgb, gx, gy);
 
-imshow([rgb nir (out-min(out(:)))/(max(out(:))-min(out(:)))])
+%% 简单线性拉伸
+% res = (out-min(out(:)))/(max(out(:))-min(out(:)));
+%% 色彩回复的拉伸
+dyn = 2;
+for i=1:3
+    Max = mean2(out(:,:,i))+dyn*std2(out(:,:,i));
+    Min = mean2(out(:,:,i))-dyn*std2(out(:,:,i));
+    res(:,:,i) = (out(:,:,i)-Min)/(Max-Min);
+end
+
+imshow([rgb nir res])
 % imshow([rgb out])
 toc
