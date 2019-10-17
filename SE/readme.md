@@ -7,3 +7,7 @@
 效果：
 
 ![res1](https://img-blog.csdnimg.cn/20190619195446742.jpg)
+
+优化线性拉伸方法后的效果：
+
+![res2](https://img-blog.csdnimg.cn/20190708121739733.jpg)
