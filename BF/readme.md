@@ -10,10 +10,10 @@
 
 ![origin](im/im1.png)
 
-<center>RGB图和红外图</center>
+RGB图和红外图
 ![detail](im/im2.png)
 
-<center>细节对比</center>
+细节对比
 可以看到，红外图像能拍到更光滑的皮肤表面，它忽略了很多“不好的细节”。至于原理，简单讲就是红外光有更长的波长，不易在皮肤表面造成散射折射，穿透力更强，因此不会被表皮上的色素阻隔，从而能更好的反映皮肤本身的信息。
 
 ## 算法
@@ -22,12 +22,12 @@
 
 ![pipeline](im/im3.png)
 
-<center>算法流程</center>
+算法流程
 ## 结果
 
 ![result](im/res.png)
 
-<center>分别为RGB图，NIR图，结果</center>
+分别为RGB图，NIR图，结果
 ## 总结
 
 图像融合问题的典型方法，滤波进行多尺度分离，融合。
